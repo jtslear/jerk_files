@@ -19,7 +19,7 @@ function jerkData {
 if [ "$1" eq "move" ]; then
   `find $1 -type f -mtime +7 -exec mv {} $2 \;`
 elif [ "$1" eq "delete" ]; then
-  `find $1 -type f -mtime +7 -exec rm -rf {} $2 \;`
+  `find $1 -type f -mtime +7 -exec rm -rf {} \;`
 else
   logMsg "Unsure of what to accomplish"
   exit
